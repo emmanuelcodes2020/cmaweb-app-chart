@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.cmawebapplicationName }}
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.cmawebapplicationName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.cmawebapplicationName }}
+    spec:
+      containers:
+        - name: {{ .Values.cmawebapplicationName }}
+          image: "{{ .Values.cmawebimage.name }}:{{ .Values.cmawebimage.tag }}"
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "256m"
+          ports:
+            - containerPort: 8080
+
+
+
