@@ -1,0 +1,12 @@
+cmawebapplicationName: cma-web-app
+
+namespace: uat
+
+cmawebimage:
+  name:  416591745024.dkr.ecr.eu-west-2.amazonaws.com/cma-web-app
+  tag: "latest"
+
+cmawebservice: cma-web-app-service
+
+serviceingress:  cmaweb-ingress-service
+cmawebappbaseURL : cma-web-app-uat.globalfrontierlink.co.uk
