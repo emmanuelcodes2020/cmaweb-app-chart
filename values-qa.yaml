@@ -1,6 +1,6 @@
 cmawebapplicationName: cma-web-app
 
-namespace: dev
+namespace: qa
 
 cmawebimage:
   name:  416591745024.dkr.ecr.eu-west-2.amazonaws.com/cma-web-app
@@ -8,4 +8,5 @@ cmawebimage:
 
 cmawebservice: cma-web-app-service
 
-
+serviceingress:  cmaweb-ingress-service
+cmawebappbaseURL : cma-web-app-qa.globalfrontierlink.co.uk
